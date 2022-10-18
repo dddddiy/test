@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            height: 400px;
+            width: 200px;
+            border: 1px;
+        }
+        .button-info{
+            width: 50px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <select id="2">
+        <option value="1" id="1" selected>1</option>
+        <option value="2" id="1">2</option>
+        <option value="3" id="1">3</option>
+        <option value="4" id="1">4</option>
+        <option value="5" id="1">5</option>
+    </select> 
+ 
+   
+    <p id="p1">打分:⭐☆☆☆☆</p>   
+     <script>
+        p1 = document.getElementById("p1");
+        select1 = document.getElementById("2");
+        select1.onchange = function () {
+            p1.innerHTML = "打分:";
+            var index1 = select1.selectedIndex;
+            var numofsolid = (Number)(this.options[index1].value);
+            if (numofsolid ==5) {
+            str = '⭐⭐⭐⭐⭐';
+            p1.innerHTML+=str;
+        } 
+        else if (numofsolid==4) {
+            str = '⭐⭐⭐⭐☆';
+            p1.innerHTML+=str;
+        }
+        else if (numofsolid ==3) {
+            str = '⭐⭐⭐☆☆';
+            p1.innerHTML+=str;
+        } 
+        else if (numofsolid==2) {
+            str = '⭐⭐☆☆☆';
+            p1.innerHTML+=str;
+        }
+        else if(numofsolid==1){
+            str = '⭐☆☆☆☆';
+            p1.innerHTML+=str;
+        }
+           
+        }
+     </script>
+        
+   
+
+</body>
+
+</html>
